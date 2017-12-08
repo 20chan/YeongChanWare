@@ -5,8 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YeongchanWare"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="엉덩이 삡뺩뿝" Height="378.572" Width="621" Topmost="True"
+        Closing="Window_Closing"
+        Closed="Window_Closed">
+    <Window.Resources>
+
+        <Style x:Key="EllipseStyle1" TargetType="{x:Type Ellipse}">
+            <Style.Resources>
+                <Storyboard x:Key="OnLoaded1">
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="{x:Null}" RepeatBehavior="Forever">
+                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                        <EasingDoubleKeyFrame KeyTime="0:0:1" Value="360"/>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </Style.Resources>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard Storyboard="{StaticResource OnLoaded1}"/>
+                </EventTrigger>
+            </Style.Triggers>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <ImageBrush ImageSource="영찬.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform CenterX="100" CenterY="100"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Stroke">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF9D00FF" Offset="1"/>
+                        <GradientStop Color="#FFFF8500" Offset="0.18"/>
+                        <GradientStop Color="#FFFFF600" Offset="0.341"/>
+                        <GradientStop Color="#FF00FF10" Offset="0.504"/>
+                        <GradientStop Color="#FF008EFF" Offset="0.688"/>
+                        <GradientStop Color="#FF0010FF" Offset="0.839"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="StrokeThickness" Value="12"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid Margin="0,0,-5.571,-5.571">
+        <Canvas>
+            <Ellipse Name="face" Width="200" Height="200" Style="{DynamicResource EllipseStyle1}" MouseRightButtonUp="face_MouseRightButtonUp" Canvas.Left="216" Canvas.Top="69" />
+        </Canvas>
+        <TextBlock HorizontalAlignment="Left" Margin="37,47,0,0" TextWrapping="Wrap" Text="그러게" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="60" FontFamily="태 나무">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-21.823"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="379,47,0,0" TextWrapping="Wrap" Text="노트북 보안 좀" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="40" FontFamily="태 나무">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="35.239"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="188,284,0,0" TextWrapping="Wrap" Text="잘 관리하지" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="40" FontFamily="궁서">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="5.789"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button HorizontalAlignment="Left" Margin="454,199,0,0" VerticalAlignment="Top" Width="118" Height="123" Click="Why_Button_Click">
+            <TextBlock Name="timeCnt" TextWrapping="Wrap" TextAlignment="Center" FontFamily="HYSinMyeongJo" FontWeight="Bold" FontSize="18"  Width="108" >왜 이러는 건가요?(클릭)</TextBlock>
+        </Button>
+        <Button Content="숨겨진버튼" HorizontalAlignment="Left" Margin="20,392,0,0" VerticalAlignment="Top" Width="75" Click="Hidden_Button_Click"/>
     </Grid>
 </Window>

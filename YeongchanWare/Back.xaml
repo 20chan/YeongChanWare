@@ -1,0 +1,32 @@
+﻿<Window x:Class="YeongchanWare.Back"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YeongchanWare"
+        mc:Ignorable="d"
+        Title="Back" Height="300" Width="300" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0,1" MappingMode="RelativeToBoundingBox" StartPoint="1,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="-57.995" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FFFF6F6F" Offset="0"/>
+                <GradientStop Color="#FFBF00FF" Offset="1"/>
+                <GradientStop Color="#FFFFD48B" Offset="0.175"/>
+                <GradientStop Color="#FEEEFF72" Offset="0.34"/>
+                <GradientStop Color="#FEB7FFA8" Offset="0.476"/>
+                <GradientStop Color="#FE92FFEB" Offset="0.625"/>
+                <GradientStop Color="#FE98B4FF" Offset="0.761"/>
+                <GradientStop Color="#FE7277FF" Offset="0.892"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+    </Grid>
+</Window>

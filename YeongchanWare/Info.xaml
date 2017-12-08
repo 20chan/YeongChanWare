@@ -1,0 +1,43 @@
+﻿<Window x:Class="YeongchanWare.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YeongchanWare"
+        mc:Ignorable="d"
+        Title="보아느요정" Height="618.418" Width="1015.063" Topmost="True">
+    <Grid Background="#FF000CC4">
+        <TextBlock HorizontalAlignment="Left" Height="158" Margin="290,42,0,0" TextWrapping="Wrap" Text="이런! 당신의 컴퓨터는 보안의 요정에게 당했습니다." VerticalAlignment="Top" Width="660" Foreground="White" FontFamily="Gulim" FontSize="50"/>
+        <Image Margin="32,254,761.143,120.714" Source="Ei-lock.svg.png" Stretch="Uniform"/>
+        <Image Margin="32,38,761.143,335.714" Source="이미지 422.png" Stretch="Fill"/>
+        <RichTextBox HorizontalAlignment="Left" Height="349" VerticalAlignment="Top" Width="677" Margin="290,205,0,0" FontFamily="Gulim">
+            <FlowDocument>
+                <Paragraph FontSize="20">
+                    내 컴퓨터는 어떻게 되었나요?
+                </Paragraph>
+                <Paragraph>
+                    걱 정마세요 당신의 컴퓨터는 안전하게 보호되었습니다. 파일은 전혀 암호화되지 않았습니다.페이스북 계정을 건들지 않았습니다. 페이스북에 이상한 글이 올라가지 않았을겁니다. (다른 사람이 올린 거면 내 알바 아님)
+                </Paragraph>
+                <Paragraph FontSize="20">
+                    제 키보드가 고장났나요?
+                </Paragraph>
+                <Paragraph>
+                    프로그램이 종료되기 전까지 키보드를 사용할 수 없습니다. ㅋ  ㅋ ㅋ ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 
+                </Paragraph>
+                <Paragraph FontSize="20">
+                    무엇을 해야 하나요?
+                </Paragraph>
+                <Paragraph>
+                    돌아가는 영찬이의 얼굴을 20번 오른쪽 클릭하시면 됩니다. 그렇다면 프로그램이 종료됩니다.
+                </Paragraph>
+                <Paragraph FontSize="20">
+                    우리는 금전적 요구를 하지 안습니다.
+                </Paragraph>
+                <Paragraph>
+                    다만 당신이 노트북 보안에 신경을 쓰지 않는다면 우리는 또다시 찾아올겁니다.
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
