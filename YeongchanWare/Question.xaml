@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:YeongchanWare"
         mc:Ignorable="d"
         DataContext ="{Binding RelativeSource={RelativeSource Self}}"
-        Title="Question" Height="389.719" Width="582.661">
+        Title="Question" Height="389.719" Width="582.661" Icon="_없음.ico">
     <Window.Resources>
         <Storyboard x:Key="appear">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="label">

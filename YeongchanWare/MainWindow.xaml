@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="엉덩이 삡뺩뿝" Height="378.572" Width="621" Topmost="True"
         Closing="Window_Closing"
-        Closed="Window_Closed">
+        Closed="Window_Closed" Icon="_없음.ico">
     <Window.Resources>
 
         <Style x:Key="EllipseStyle1" TargetType="{x:Type Ellipse}">
