@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ListExtensions.cs" />
     <Compile Include="Question.xaml.cs">
       <DependentUpon>Question.xaml</DependentUpon>
     </Compile>
@@ -133,6 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="이미지 422.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="성식.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dsm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

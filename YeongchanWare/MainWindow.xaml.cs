@@ -25,8 +25,8 @@ namespace YeongchanWare
     {
         bool readyForClose = false;
         int time = 0;
-        KeyboardHook hook;
-        Back back;
+        internal static KeyboardHook hook;
+        internal static Back back;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace YeongchanWare
             TaskManager(false);
         }
 
-        void TaskManager(bool enabled)
+        public static void TaskManager(bool enabled)
         {
             RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(
                 @"Software\Microsoft\Windows\CurrentVersion\Policies\System");
@@ -117,9 +117,9 @@ namespace YeongchanWare
         {
             time++;
             SetRandomAnimation();
-            if (time < 25)
-                timeCnt.Text = $"이제 겨우 {time}번 눌렀구나 {20 - time}번 남았거늘 ㅉㅉ";
-            else if (time < 29)
+            if (time < 5)
+                timeCnt.Text = $"이제 겨우 {time}번 눌렀구나 {3 - time}번 남았거늘 ㅉㅉ";
+            else if (time < 7)
                 timeCnt.Text = $"{time}번 눌렀는데 왜 안 꺼지냐고??? 내 알 바 아님 버그겠지";
             else
             {
@@ -131,9 +131,7 @@ namespace YeongchanWare
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            hook.HookEnd();
-            back.Close();
-            TaskManager(true);
+            new Question().Show();
         }
     }
 }

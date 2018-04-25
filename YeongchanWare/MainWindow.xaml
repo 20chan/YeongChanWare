@@ -70,7 +70,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="379,47,0,0" TextWrapping="Wrap" Text="노트북 보안 좀" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="40" FontFamily="태 나무">
+        <TextBlock HorizontalAlignment="Left" Margin="401,54,0,0" TextWrapping="Wrap" Text="노트북 보안 좀" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="40" FontFamily="태 나무">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -91,8 +91,18 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <Button HorizontalAlignment="Left" Margin="454,199,0,0" VerticalAlignment="Top" Width="118" Height="123" Click="Why_Button_Click">
-            <TextBlock Name="timeCnt" TextWrapping="Wrap" TextAlignment="Center" FontFamily="HYSinMyeongJo" FontWeight="Bold" FontSize="18"  Width="108" >왜 이러는 건가요?(클릭)</TextBlock>
+            <TextBlock x:Name="timeCnt" TextWrapping="Wrap" TextAlignment="Center" FontFamily="HYSinMyeongJo" FontWeight="Bold" FontSize="18"  Width="108" ><Run Text="왜 이러는 건가요"/><Run Text="+어"/><Run Text="떡"/><Run Text="게종"/><Run Text="료"/><Run Text=" 하나요"/><Run Text="?(클릭)"/></TextBlock>
         </Button>
         <Button Content="숨겨진버튼" HorizontalAlignment="Left" Margin="20,392,0,0" VerticalAlignment="Top" Width="75" Click="Hidden_Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="230,-2,0,0" TextWrapping="Wrap" Text="* v2 *" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="60" FontFamily="휴먼굵은샘체" Foreground="Red">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.332"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
     </Grid>
 </Window>

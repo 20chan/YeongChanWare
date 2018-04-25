@@ -1,0 +1,86 @@
+﻿<Window x:Class="YeongchanWare.Question"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YeongchanWare"
+        mc:Ignorable="d"
+        DataContext ="{Binding RelativeSource={RelativeSource Self}}"
+        Title="Question" Height="389.719" Width="582.661">
+    <Window.Resources>
+        <Storyboard x:Key="appear">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="label">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-13.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="931"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="label">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-58.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="label">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-720"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="label">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="정답~!~!!!"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="정답~!~!!!"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.7" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="Black"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="wrong">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="label">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="틀렸음~!~!!!!!!!"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                <EasingColorKeyFrame KeyTime="0" Value="Red"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="label">
+                <EasingDoubleKeyFrame KeyTime="0" Value="972"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-23.114"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="label">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-49.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-46.331"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="label">
+                <EasingDoubleKeyFrame KeyTime="0" Value="6.909"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-720.398"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <TextBox Name="question"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding QuestionText}" FontFamily="Gulim" VerticalAlignment="Top" Width="422" TextAlignment="Center" FontSize="16"/>
+        <Grid HorizontalAlignment="Left" Height="180" Margin="10,107,0,0" VerticalAlignment="Top" Width="558">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="50*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="TxtBlock1" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Text="{Binding Path=Text1}" VerticalAlignment="Center" FontSize="17" MouseDown="TextBlock_MouseDown"/>
+            <TextBlock Name="TxtBlock2" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=Text2}" VerticalAlignment="Center" FontSize="17" MouseDown="TextBlock_MouseDown"/>
+            <TextBlock Name="TxtBlock3" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Text="{Binding Path=Text3}" VerticalAlignment="Center" FontSize="17" MouseDown="TextBlock_MouseDown"/>
+            <TextBlock Name="TxtBlock4" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=Text4}" VerticalAlignment="Center" FontSize="17" MouseDown="TextBlock_MouseDown"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="92" Margin="437,10,0,0" VerticalAlignment="Top" Width="131">
+            <Image Source="{Binding QuestionImg}" Stretch="Fill" />
+        </Grid>
+        <TextBox HorizontalAlignment="Left" Margin="10,292,0,0" TextWrapping="Wrap" Text="{Binding LeftCount}" VerticalAlignment="Top" Height="60" Width="558" VerticalContentAlignment="Center" TextAlignment="Center" />
+        <Label x:Name="label" Content="정답~!~!!!" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="-317.303,0,0,10.219" FontFamily="Gungsuh" FontSize="48" HorizontalAlignment="Left" Width="298.895" Height="87.997" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+    </Grid>
+</Window>
